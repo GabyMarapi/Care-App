@@ -84,13 +84,9 @@
         app:srcCompat="@mipmap/favorite" />
 </GridLayout>
 
-
-
-<ImageView
-    android:id="@+id/imageView4"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:srcCompat="@mipmap/heartback" />
-
+    <ListView
+        android:id="@+id/lista"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </LinearLayout>
