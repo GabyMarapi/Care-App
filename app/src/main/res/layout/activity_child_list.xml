@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="40dp"
+    android:paddingLeft="60dp"
+    android:paddingRight="60dp"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/textView"
+        android:textSize="18dp"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/titleUpdateChild"
+        android:layout_marginBottom="35dp"
+        android:gravity="center_horizontal" />
+
+    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/GridLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="1"
+        android:orientation="horizontal"
+        tools:context=".GridXMLActivity" >
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:srcCompat="@mipmap/iconchild" />
+
+        <TextView
+            android:id="@+id/text1"
+            android:textSize="18dp"
+            android:width="200dp"
+            android:text="@string/textAge"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_gravity="center"/>
+
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/goicon" />
+    </GridLayout>
+
+    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/GridLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="1"
+        android:orientation="horizontal"
+        tools:context=".GridXMLActivity" >
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:srcCompat="@mipmap/iconchild" />
+
+        <TextView
+            android:id="@+id/text2"
+            android:textSize="18dp"
+            android:width="200dp"
+            android:text="@string/textAge"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_gravity="center"/>
+
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/favorite" />
+    </GridLayout>
+
+
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/heartback" />
+
+
+</LinearLayout>

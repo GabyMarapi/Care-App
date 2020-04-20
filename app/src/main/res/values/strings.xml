@@ -1,3 +1,56 @@
 <resources>
     <string name="app_name">Care-App</string>
+    <string name="registerTxt">Registrarse</string>
+    <string name="datosText">Datos de usuario</string>
+    <string name="uploadPhotoText">Subir foto</string>
+
+
+    <string name="emailEText">Registrarse</string>
+    <string name="passwordEText">Registrse</string>
+
+
+    <string name="registerBtn">Continuar</string>
+    <string name="saveUserBtn">Continuar</string>
+    <string name="save">Guardar</string>
+    <string name="update">Actualizar</string>
+
+    <string name="redirectLogin">Iniciar sesión</string>
+    <string name="titleRegisterChild">Datos de mi niñ@</string>
+    <string name="titleUpdateChild">Actualizar datos </string>
+
+    <string name="textAge">años </string>
+    <string name="textKg">kg </string>
+    <string name="textCm">cm </string>
+    <string name="texthemoglobina">hemogl. </string>
+
+    <string name="childInf1">Edad: 12 años</string>
+    <string name="childInf2">Peso: 35 Kg</string>
+    <string name="childInf3">Talla: 125 cm</string>
+    <string name="childInf4">Hemoglobina: 12</string>
+    <string name="childInf5">Saludable</string>
+    <string name="childInf6">Se encuentra en el grupo:</string>
+    <string name="childInf7">Peso normal</string>
+    <string name="childInf8">Ver historial</string>
+    <string name="childInf9">Actualizar</string>
+    <string name="signInTitle">Iniciar sesión</string>
+
+    <string name="menuTile0">Home</string>
+    <string name="menuTile1">Registrar a mi niñ@</string>
+    <string name="menuTile2">Mis niñ@s</string>
+    <string name="menuTile3">Promociones</string>
+    <string name="menuTile4">Centros de atención</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="home_second">Home Second</string>
+
 </resources>
