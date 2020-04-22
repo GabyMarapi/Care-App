@@ -15,8 +15,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.NetworkResponse;
@@ -44,9 +46,10 @@ import java.util.List;
 import java.util.Map;
 
 public class ChildRegister extends Fragment {
-
+    EditText txtName, txtAge, txtWeight, txtSize, txtHemogl;
+    Fragment someFragment;
+    Button button;
     private ChildRegisterViewModel mViewModel;
-
     public static ChildRegister newInstance() {
         return new ChildRegister();
     }
@@ -55,7 +58,8 @@ public class ChildRegister extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
 
-        this.registerChildren();
+
+
         return inflater.inflate(R.layout.child_register_fragment, container, false);
 
     }
@@ -63,30 +67,120 @@ public class ChildRegister extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        txtName = (EditText) getActivity().findViewById(R.id.idETextName);
+        txtAge = (EditText) getActivity().findViewById(R.id.idETextAge);
+        txtWeight = (EditText) getActivity().findViewById(R.id.idETextWeight);
+        txtSize = (EditText) getActivity().findViewById(R.id.idETextSize);
+        txtHemogl = (EditText) getActivity().findViewById(R.id.idETextHemogl);
         mViewModel = ViewModelProviders.of(this).get(ChildRegisterViewModel.class);
+        //this.registerChildren();
+        button = getActivity().findViewById(R.id.idRegister);
+
+        // Capture button clicks
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                String name = txtName.getText().toString();
+                String age = txtAge.getText().toString();
+                String weight = txtWeight.getText().toString();
+                String size = txtSize.getText().toString();
+                String hemogl = txtHemogl.getText().toString();
+
+                try {
+                    RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
+                    String url = "http://gabymarapi.atwebpages.com/index.php/children";
+                    JSONObject jsonBody = new JSONObject();
+                    jsonBody.put("name", name);
+                    jsonBody.put("age", age);
+                    jsonBody.put("weight", weight);
+                    jsonBody.put("size", size);
+                    jsonBody.put("hemogl", hemogl);
+                    jsonBody.put("date", "2020-04-19 00:00:00");
+                    jsonBody.put("idusuario", 20);
+
+
+                    final String requestBody = jsonBody.toString();
+                    StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
+                            new Response.Listener<String>() {
+                                @Override
+                                public void onResponse(String response) {
+                                    Log.i("VOLLEY", response);
+                                    Toast.makeText(getActivity(), "Niño se ha registrado correctamente", Toast.LENGTH_LONG).show();
+                                }
+                            },
+                            new Response.ErrorListener() {
+                                @Override
+                                public void onErrorResponse(VolleyError error) {
+                                    Log.i("======>", error.toString());
+                                }
+                            }) {
+
+                        @Override
+                        public String getBodyContentType() {
+                            return "application/json; charset=utf-8";
+                        }
+
+                        @Override
+                        public byte[] getBody() throws AuthFailureError {
+                            try {
+                                return requestBody == null ? null : requestBody.getBytes("utf-8");
+                            } catch (UnsupportedEncodingException uee) {
+                                VolleyLog.wtf("Unsupported Encoding while trying to get the bytes of %s using %s", requestBody, "utf-8");
+                                return null;
+                            }
+                        }
+
+                        @Override
+                        protected Response<String> parseNetworkResponse(NetworkResponse response) {
+                            String responseString = "";
+                            if (response != null) {
+                                responseString = String.valueOf(response.statusCode);
+                                // can get more details such as response.headers
+                            }
+                            return Response.success(responseString, HttpHeaderParser.parseCacheHeaders(response));
+                        }
+                    };
+                    requestQueue.add(stringRequest);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        });
+
+
         // TODO: Use the ViewModel
 
 
     }
 
+
     public void registerChildren() {
+        String name = txtName.getText().toString();
+        String age = txtName.getText().toString();
+        String weight = txtName.getText().toString();
+        String size = txtName.getText().toString();
+        String hemogl = txtName.getText().toString();
+
         try {
             RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
             String url = "http://gabymarapi.atwebpages.com/index.php/children";
             JSONObject jsonBody = new JSONObject();
-            jsonBody.put("name", "Yefer");
-            jsonBody.put("age", 6);
-            jsonBody.put("weight", 29);
-            jsonBody.put("size", 120);
-            jsonBody.put("hemogl", 11);
+            jsonBody.put("name", name);
+            jsonBody.put("age", age);
+            jsonBody.put("weight", weight);
+            jsonBody.put("size", size);
+            jsonBody.put("hemogl", hemogl);
             jsonBody.put("date", "2020-04-19 00:00:00");
             jsonBody.put("idusuario", 20);
+
+
             final String requestBody = jsonBody.toString();
             StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                     new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
                             Log.i("VOLLEY", response);
+                            Toast.makeText(getActivity(), "Niño se ha registrado correctamente", Toast.LENGTH_LONG).show();
                         }
                     },
                     new Response.ErrorListener() {

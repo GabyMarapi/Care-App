@@ -26,8 +26,5 @@ public class NewRegister extends AppCompatActivity {
         Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
         startActivity(intent);
     }
-    public void goSignIn(View view) {
-        Intent intent = new Intent(this, SignIn.class);
-        startActivity(intent);
-    }
+
 }

@@ -15,9 +15,9 @@ public class UserRegister extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_register);
 
-        txtEmail = (EditText) findViewById(R.id.idETextEmail);
+       /* txtEmail = (EditText) findViewById(R.id.idETextEmail);
         txtPassword = (EditText) findViewById(R.id.idETextPassword);
-        txtConfirmPassword = (EditText) findViewById(R.id.idETextConfirmPassword);
+        txtConfirmPassword = (EditText) findViewById(R.id.idETextConfirmPassword);*/
 
     }
 
@@ -37,5 +37,11 @@ public class UserRegister extends AppCompatActivity {
 
     public void alertRegister(String warning) {
         Toast.makeText(this, warning, Toast.LENGTH_LONG).show();
+    }
+
+
+    public void goSignIn(View view) {
+        Intent intent = new Intent(this, SignIn.class);
+        startActivity(intent);
     }
 }

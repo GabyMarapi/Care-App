@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/nav_home"
         android:name="com.example.care_app.ui.home.HomeFragment"
-        android:label="@string/menu_home"
+        android:label="@string/menu_title1"
         tools:layout="@layout/fragment_home">
 
         <action
@@ -31,20 +31,24 @@
 
     <fragment
         android:id="@+id/nav_register"
+        android:label="@string/menu_title2"
         android:name="com.example.care_app.ui.childregister.ChildRegister"
         tools:layout="@layout/child_register_fragment" />
 
     <fragment
         android:id="@+id/nav_list"
+        android:label="@string/menu_title3"
         android:name="com.example.care_app.ui.childrenList.ChildrenList"
         tools:layout="@layout/child_register_fragment" />
 
     <fragment
         android:id="@+id/nav_promotion"
+        android:label="@string/menu_title4"
         android:name="com.example.care_app.ui.promotions.Promotions"
         tools:layout="@layout/child_register_fragment" />
     <fragment
         android:id="@+id/nav_centers"
+        android:label="@string/menu_title5"
         android:name="com.example.care_app.ui.centeratencion.CenterAtention"
         tools:layout="@layout/child_register_fragment" />
 

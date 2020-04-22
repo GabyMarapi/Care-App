@@ -6,7 +6,7 @@
 
 
     <string name="emailEText">Registrarse</string>
-    <string name="passwordEText">Registrse</string>
+    <string name="passwordEText">Registrarse</string>
 
 
     <string name="registerBtn">Continuar</string>
@@ -17,6 +17,7 @@
     <string name="redirectLogin">Iniciar sesión</string>
     <string name="titleRegisterChild">Datos de mi niñ@</string>
     <string name="titleUpdateChild">Actualizar datos </string>
+    <string name="titleListChild">Mis niñ@s </string>
 
     <string name="textAge">años </string>
     <string name="textKg">kg </string>
@@ -52,5 +53,12 @@
     <string name="menu_slideshow">Slideshow</string>
 
     <string name="home_second">Home Second</string>
+    <string name="myUser">gabyg1004@gmail.com</string>
+
+    <string name="menu_title1">Home</string>
+    <string name="menu_title2">Registrar a mi niño</string>
+    <string name="menu_title3">Mis niños</string>
+    <string name="menu_title4">Promociones</string>
+    <string name="menu_title5">Centros de atención</string>
 
 </resources>

@@ -70,7 +70,7 @@ public class ChildrenList extends Fragment {
                     List<String> items = new ArrayList<>();
                     for (int i=0; i<jsonArray.length(); i++){
                         JSONObject object = jsonArray.getJSONObject(i);
-                        items.add(object.getString("name") + "  "+object.getString("date"));
+                        items.add(object.getString("name"));
                     }
 
                     ListView lstProductos = getView().findViewById(R.id.lista);
