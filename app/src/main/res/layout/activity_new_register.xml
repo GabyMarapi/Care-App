@@ -8,7 +8,7 @@ android:orientation="vertical"
 android:paddingTop="40dp"
 android:paddingLeft="60dp"
 android:paddingRight="60dp"
-tools:context=".ui.childregister.ChildRegister"
+tools:context=".NewRegister"
     >
 
 <TextView
@@ -27,8 +27,17 @@ tools:context=".ui.childregister.ChildRegister"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:ems="10"
-    android:hint="Nombre y apellido"
+    android:hint="Nombres"
     android:layout_marginBottom="15dp"
+    android:inputType="text" />
+
+<EditText
+    android:id="@+id/idETexLatname"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:ems="10"
+    android:hint="Apellidos"
+    android:layout_marginBottom="25dp"
     android:inputType="text" />
 
 <EditText
@@ -39,68 +48,21 @@ tools:context=".ui.childregister.ChildRegister"
     android:hint="Celular"
     android:layout_marginBottom="15dp"
     android:inputType="number" />
-<EditText
-    android:id="@+id/idETextEmail"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:ems="10"
-    android:hint="Correo electrónico"
-    android:layout_marginBottom="15dp"
-    android:inputType="text" />
-
-<GridLayout
-    android:id="@+id/GridLayout1"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:columnCount="2"
-    android:rowCount="1"
-    android:orientation="horizontal"
-
-    tools:context=".GridXMLActivity" >
 
 
-
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/idBtnNextUserRegister"
+    <Button
+        android:id="@+id/idBtnNextUserRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:onClick="saveUser"
+        android:text="@string/registerBtn"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_camera" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="80dp"
-        android:layout_height="18dp"
-        android:layout_row="0"
-        android:layout_column="1"
-        android:layout_gravity="bottom"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginBottom="36dp"
-        android:gravity="bottom"
-        android:text="@string/uploadPhotoText"
-        app:layout_constraintBottom_toTopOf="@+id/idBtnNextUserRegister"
-        app:layout_constraintStart_toEndOf="@+id/imageButton" />
-
-
-</GridLayout>
-
-
-<Button
-    android:id="@+id/idBtnNextUserRegister"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/colorPrimary"
-    android:onClick="redirectHome"
-    android:text="@string/registerBtn"
-    android:textColor="@color/colorWhite"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/idETextConfirmPassword"
-    app:layout_constraintVertical_bias="0.085" />
+        app:layout_constraintTop_toBottomOf="@+id/idETextConfirmPassword"
+        app:layout_constraintVertical_bias="0.085"
+       />
 
 
 </LinearLayout>

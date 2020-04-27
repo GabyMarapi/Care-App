@@ -3,6 +3,8 @@
     package="com.example.care_app">
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -11,17 +13,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
+        android:noHistory = "true"
         android:theme="@style/AppTheme">
         <activity
             android:name=".Main2Activity"
             android:label="@string/title_activity_main2"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+
         <activity android:name=".SignIn" />
         <activity android:name=".ChildHistory" />
         <activity android:name=".ChidInformation" />
-        <activity android:name=".ChildList" />
         <activity android:name=".UpdateChild" />
-        <activity android:name=".RegisterChild" />
         <activity android:name=".Home" />
         <activity android:name=".NewRegister" />
         <activity android:name=".UserRegister" />

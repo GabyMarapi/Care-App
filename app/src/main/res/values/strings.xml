@@ -15,6 +15,7 @@
     <string name="update">Actualizar</string>
 
     <string name="redirectLogin">Iniciar sesión</string>
+    <string name="redirectSignIn">Registrarse</string>
     <string name="titleRegisterChild">Datos de mi niñ@</string>
     <string name="titleUpdateChild">Actualizar datos </string>
     <string name="titleListChild">Mis niñ@s </string>
@@ -24,22 +25,27 @@
     <string name="textCm">cm </string>
     <string name="texthemoglobina">hemogl. </string>
 
-    <string name="childInf1">Edad: 12 años</string>
-    <string name="childInf2">Peso: 35 Kg</string>
-    <string name="childInf3">Talla: 125 cm</string>
-    <string name="childInf4">Hemoglobina: 12</string>
+    <string name="childInf1">Edad: </string>
+    <string name="childInf2">Peso: </string>
+    <string name="childInf3">Talla: </string>
+    <string name="childInf4">Hemoglobina: </string>
+    <string name="childInf0">Último registro: </string>
     <string name="childInf5">Saludable</string>
-    <string name="childInf6">Se encuentra en el grupo:</string>
+    <string name="childInf6">Grupo:</string>
     <string name="childInf7">Peso normal</string>
     <string name="childInf8">Ver historial</string>
-    <string name="childInf9">Actualizar</string>
+    <string name="childInf9">Actualizar datos</string>
+    <string name="childInf10">Ver información</string>
     <string name="signInTitle">Iniciar sesión</string>
+
+    <string name="loading">Loading..</string>
 
     <string name="menuTile0">Home</string>
     <string name="menuTile1">Registrar a mi niñ@</string>
     <string name="menuTile2">Mis niñ@s</string>
     <string name="menuTile3">Promociones</string>
     <string name="menuTile4">Centros de atención</string>
+    <string name="menuTile5">Salir</string>
     <string name="title_activity_main2">Main2Activity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -61,4 +67,8 @@
     <string name="menu_title4">Promociones</string>
     <string name="menu_title5">Centros de atención</string>
 
+    <string name="home1">¿Cómo puedo saber si mi hijo tiene exceso de peso?</string>
+    <string name="home2">El IMC por edad usa las tablas de crecimiento de los Centros para el Control y la Prevención de Enfermedades de los Estados Unidos. Los médicos usan estas tablas para seguir el crecimiento de un niño. </string>
+    <string name="home3">¿Qué puedo hacer para mejorar los hábitos de alimentación de mi hijo?</string>
+    <string name="home4">Es importante consumir menos alimentos, bebidas y refrigerios altos en calorías, grasa, azúcar y sal. Además, usted puede hacer que su hijo coma más saludablemente ofreciendo como: frutas, verduras y granos enteros como arroz integral</string>
 </resources>

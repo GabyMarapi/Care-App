@@ -5,53 +5,56 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingTop="40dp"
+    android:paddingTop="30dp"
     android:paddingLeft="30dp"
     android:paddingRight="30dp"
-    tools:context=".MainActivity" >
-
+    tools:context=".ChidInformation" >
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView0"
         android:textSize="18dp"
         android:textAlignment="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sebastian"
-        android:layout_marginBottom="35dp"
+        android:text="@string/childInf10"
+        android:layout_marginBottom="20dp"
         android:gravity="center_horizontal" />
 
     <TextView
-        android:id="@+id/text1"
+        android:id="@+id/idETextName"
         android:textSize="18dp"
+        android:textAlignment="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/childInf1"
+        android:text="@string/loading"
         android:layout_marginBottom="15dp"
-        android:layout_gravity="center"/>
-    <TextView
-        android:id="@+id/text2"
-        android:textSize="18dp"
-        android:layout_width="match_parent"
+        android:gravity="center_horizontal" />
+
+    <GridLayout
+        android:id="@+id/GridLayout0"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/childInf2"
-        android:layout_marginBottom="15dp"
-        android:layout_gravity="center"/>
-    <TextView
-        android:id="@+id/text3"
-        android:textSize="18dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/childInf3"
-        android:layout_marginBottom="15dp"
-        android:layout_gravity="center"/>
-    <TextView
-        android:id="@+id/text4"
-        android:textSize="18dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/childInf4"
-        android:layout_marginBottom="15dp"
-        android:layout_gravity="center"/>
+        android:columnCount="2"
+        android:rowCount="1"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp"
+        tools:context=".GridXMLActivity" >
+        <TextView
+            android:id="@+id/idETextAge0"
+            android:textSize="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/childInf1"
+            android:layout_marginRight="15dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/idETextAge"
+            android:textSize="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+    </GridLayout>
 
     <GridLayout
         android:id="@+id/GridLayout1"
@@ -60,7 +63,83 @@
         android:columnCount="2"
         android:rowCount="1"
         android:orientation="horizontal"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="12dp"
+        tools:context=".GridXMLActivity" >
+        <TextView
+            android:id="@+id/idETextWeight0"
+            android:textSize="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/childInf2"
+            android:layout_marginRight="15dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/idETextWeight"
+            android:textSize="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+    </GridLayout>
+
+    <GridLayout
+        android:id="@+id/GridLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="1"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp"
+        tools:context=".GridXMLActivity" >
+        <TextView
+            android:id="@+id/idETextSize0"
+            android:textSize="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/childInf3"
+            android:layout_marginRight="15dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/idETextSize"
+            android:textSize="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+    </GridLayout>
+    <GridLayout
+        android:id="@+id/GridLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="1"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp"
+        tools:context=".GridXMLActivity" >
+        <TextView
+            android:id="@+id/idETextHemogl0"
+            android:textSize="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/childInf4"
+            android:layout_marginRight="15dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/idETextHemogl"
+            android:textSize="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+    </GridLayout>
+
+
+    <GridLayout
+        android:id="@+id/GridLayout5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="1"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp"
         tools:context=".GridXMLActivity" >
         <ImageView
             android:id="@+id/imageView"
@@ -72,29 +151,59 @@
             app:srcCompat="@mipmap/favorite" />
 
         <TextView
-            android:id="@+id/text5"
-            android:textSize="18dp"
+            android:id="@+id/idETextResult"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
             android:textColor="@color/colorPrimary"
+            android:textSize="18dp" />
+    </GridLayout>
+
+    <GridLayout
+        android:id="@+id/GridLayout4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="1"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp"
+        tools:context=".GridXMLActivity" >
+        <TextView
+            android:id="@+id/idETextDate0"
+            android:textSize="18dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/childInf5"
+            android:text="@string/childInf0"
+            android:layout_marginRight="15dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/idETextDate"
+            android:textSize="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"/>
     </GridLayout>
 
-    <TextView
-        android:id="@+id/text6"
-        android:textSize="18dp"
+    <Button
+        android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/childInf6"
-        android:layout_marginBottom="15dp"
-        android:layout_gravity="center"/>
-    <TextView
-        android:id="@+id/text7"
-        android:textSize="18dp"
+        android:layout_marginBottom="12dp"
+        android:background="@color/colorPrimary"
+        android:onClick="goChildHistory"
+        android:text="@string/childInf8"
+        android:textColor="@color/colorWhite"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:id="@+id/button3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/childInf7"
-        android:layout_marginBottom="15dp"
-        android:layout_gravity="center"/>
+        android:background="@color/colorWhite"
+        android:onClick="goUpdateChild"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/childInf9"
+        tools:ignore="OnClick" />
+
+
 </LinearLayout>
