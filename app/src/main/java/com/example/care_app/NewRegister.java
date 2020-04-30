@@ -67,10 +67,10 @@ public class NewRegister extends AppCompatActivity {
                 result = dao.obtener(email);
                 extras.putString("userId", Integer.toString(result.getId()));
                 extras.putString("userEmail", email);
-                /*
+
                 eName.setText("");
                 eLastname.setText("");
-                ePhone.setText("");*/
+                ePhone.setText("");
 
                 Intent intent = new Intent(this, Main2Activity.class);
                 intent.putExtras(extras);

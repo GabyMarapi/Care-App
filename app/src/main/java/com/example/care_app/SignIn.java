@@ -46,6 +46,9 @@ public class SignIn extends AppCompatActivity {
                         extras.putString("userId", Integer.toString(result.getId()));
                         extras.putString("userEmail", email);
 
+                        editTextEmail.setText("");
+                        editTextPassword.setText("");
+
                         Intent intent = new Intent(SignIn.this, Main2Activity.class);
                         intent.putExtras(extras);
                         startActivity(intent);

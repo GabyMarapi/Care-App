@@ -34,8 +34,10 @@
     <string name="childInf6">Grupo:</string>
     <string name="childInf7">Peso normal</string>
     <string name="childInf8">Ver historial</string>
-    <string name="childInf9">Actualizar datos</string>
-    <string name="childInf10">Ver información</string>
+
+    <string name="childInf9">Actualizar datos niñ@</string>
+    <string name="childInf10">Información historica niñ@</string>
+    <string name="childInf11">Situación actual niñ@</string>
     <string name="signInTitle">Iniciar sesión</string>
 
     <string name="loading">Loading..</string>

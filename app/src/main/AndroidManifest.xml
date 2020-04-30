@@ -21,9 +21,9 @@
             android:theme="@style/AppTheme.NoActionBar"></activity>
 
         <activity android:name=".SignIn" />
-        <activity android:name=".ChildHistory" />
-        <activity android:name=".ChidInformation" />
-        <activity android:name=".UpdateChild" />
+        <activity android:name=".ChildHistory" android:label="@string/childInf10"/>
+        <activity android:name=".ChidInformation" android:label="@string/childInf11" />
+        <activity android:name=".UpdateChild" android:label="@string/childInf9"/>
         <activity android:name=".Home" />
         <activity android:name=".NewRegister" />
         <activity android:name=".UserRegister" />
